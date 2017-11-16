@@ -15,6 +15,7 @@ OPS+=("-p thread_pool_min=${VARNISH_THREAD_POOL_MIN}")
 OPS+=("-p thread_pools=${VARNISH_THREAD_POOLS}")
 OPS+=("-p cli_timeout=${VARNISH_CLI_TIMEOUT}")
 OPS+=("-p feature=+esi_ignore_https")
+OPS+=("-p feature=+esi_disable_xml_check")
 OPS+=("-s file,/var/lib/varnish/varnish_storage.bin,${VARNISH_STORAGE}")
 
 if [[ -a /etc/varnish/configs/default.vcl ]]; then
